@@ -29,12 +29,12 @@
           &.fishing-prince{
             flex-wrap: wrap;
             dd{
+              padding-bottom: 1em;
               width: 100%;
               &:nth-last-child(1){
                 text-align: center;
                 img{
-                  max-width: 50%;
-                  // transform: scale(0.7);
+                  max-width: 100%;
                 }
               }
             }
@@ -82,7 +82,7 @@
 }
 @media only screen and (min-width: 520px){
   .m-break{
-    display: unset;
+    display: inline;
   }
 }
 @media only screen and (min-width: 700px){
@@ -101,23 +101,6 @@
         .content{
           padding: 0 2em;
         }
-        dl{
-          &.fishing-prince{
-            // flex-wrap: nowrap;
-            dd{
-              // width: unset;
-              &:nth-last-child(1){
-                // text-align: center;
-                img{
-                  max-width: 40%;
-                }
-              }
-              // div{
-              //   column-count: unset;
-              // }
-            }
-          }
-        }
       }
     }
   }
@@ -132,12 +115,6 @@
             flex-wrap: nowrap;
             dd{
               width: unset;
-              &:nth-last-child(1){
-                text-align: center;
-                img{
-                  max-width: unset;
-                }
-              }
               div{
                 column-count: unset;
               }

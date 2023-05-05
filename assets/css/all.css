@@ -1034,6 +1034,12 @@ body {
 .reel .reel-content .yellow-bg {
   margin-bottom: 46px;
   padding: 0.625em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2.5em;
   background-image: url(../images/yellow-bg.png);
   background-repeat: repeat-y;
   background-size: 100%;
@@ -1043,11 +1049,11 @@ body {
 }
 .reel .reel-content .yellow-bg .copywriting {
   padding: 1em 0;
+  width: 100%;
   line-height: 1.5;
   text-align: center;
 }
 .reel .reel-content .yellow-bg .yellow-white-bg {
-  margin-top: 2.5em;
   background-color: #fff8d9;
   border-radius: 5px;
 }
@@ -1066,6 +1072,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   gap: 1em;
+  row-gap: 0;
   margin: 0;
 }
 .reel .reel-content .yellow-bg dl.fishing-prince dd {
@@ -1256,13 +1263,14 @@ body {
         flex-wrap: wrap;
   }
   .reel .reel-content .yellow-bg dl.fishing-prince dd {
+    padding-bottom: 1em;
     width: 100%;
   }
   .reel .reel-content .yellow-bg dl.fishing-prince dd:nth-last-child(1) {
     text-align: center;
   }
   .reel .reel-content .yellow-bg dl.fishing-prince dd:nth-last-child(1) img {
-    max-width: 50%;
+    max-width: 100%;
   }
   .eudemons-rows {
     grid-template-columns: unset;
@@ -1287,7 +1295,7 @@ body {
 }
 @media only screen and (min-width: 520px) {
   .m-break {
-    display: unset;
+    display: inline;
   }
 }
 @media only screen and (min-width: 700px) {
@@ -1304,9 +1312,6 @@ body {
   .reel .reel-content .yellow-bg .content {
     padding: 0 2em;
   }
-  .reel .reel-content .yellow-bg dl.fishing-prince dd:nth-last-child(1) img {
-    max-width: 40%;
-  }
 }
 @media only screen and (min-width: 900px) {
   .reel .reel-content .yellow-bg dl.fishing-prince {
@@ -1315,12 +1320,6 @@ body {
   }
   .reel .reel-content .yellow-bg dl.fishing-prince dd {
     width: unset;
-  }
-  .reel .reel-content .yellow-bg dl.fishing-prince dd:nth-last-child(1) {
-    text-align: center;
-  }
-  .reel .reel-content .yellow-bg dl.fishing-prince dd:nth-last-child(1) img {
-    max-width: unset;
   }
   .reel .reel-content .yellow-bg dl.fishing-prince dd div {
     -webkit-column-count: unset;
