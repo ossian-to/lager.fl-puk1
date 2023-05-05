@@ -1,0 +1,164 @@
+// 卷軸
+
+@media only screen and (min-width: 0){
+  body{
+    font-size: 16px;
+  }
+  .m-break{
+    display: block;
+  }
+  .reel{
+    .reel-img{
+      filter: drop-shadow(1vw 1vw 0.5vw rgba(0, 0, 0, 0.35));
+    }
+    .reel-content{
+      margin: 0 0.5em;
+      transform: translateY(-7vw);
+      .yellow-bg{
+        padding-top: 6vw;
+        .yellow-white-bg{
+          .wax-seal{
+            transform: scale(0.6);
+          }
+        }
+        .content{
+          padding: 0 0.625em;
+        }
+        dl{
+          &.fishing-prince{
+            flex-wrap: wrap;
+            dd{
+              width: 100%;
+              &:nth-last-child(1){
+                text-align: center;
+                img{
+                  max-width: 50%;
+                  // transform: scale(0.7);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 520px){
+  .m-break{
+    display: unset;
+  }
+}
+@media only screen and (min-width: 700px){
+  body{
+    font-size: 22px;
+  }
+  .reel{
+    .reel-content{
+      margin: 0 1em;
+      .yellow-bg{
+        .yellow-white-bg{
+          .wax-seal{
+            transform: scale(1);
+          }
+        }
+        .content{
+          padding: 0 2em;
+        }
+        dl{
+          &.fishing-prince{
+            // flex-wrap: nowrap;
+            dd{
+              // width: unset;
+              &:nth-last-child(1){
+                // text-align: center;
+                img{
+                  max-width: 40%;
+                }
+              }
+              // div{
+              //   column-count: unset;
+              // }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 900px){
+  .reel{
+    .reel-content{
+      .yellow-bg{
+        dl{
+          &.fishing-prince{
+            flex-wrap: nowrap;
+            dd{
+              width: unset;
+              &:nth-last-child(1){
+                text-align: center;
+                img{
+                  max-width: unset;
+                }
+              }
+              div{
+                column-count: unset;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1100px){
+  .reel{
+    .reel-content{
+      .yellow-bg{
+        dl{
+          &.fishing-prince{
+            dd{
+              div{
+                column-count: 2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px){
+  .reel{
+    .reel-content{
+      .yellow-bg{
+        dl{
+          &.fishing-prince{
+            dd{
+              div{
+                column-count: 3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1286px){
+  .reel{
+    .reel-img{
+      filter: drop-shadow(10px 15px 5px rgba(0, 0, 0, 0.35));
+    }
+    .reel-content{
+      margin: 0 auto;
+      transform: translateY(-46px);
+      .yellow-bg{
+        padding-top: 36px;
+      }
+    }
+  }
+}

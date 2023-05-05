@@ -1,0 +1,230 @@
+@charset "UTF-8";
+@import "initial";
+
+
+// 載入思源宋體 Medium
+// font-family: 'Noto Serif TC', serif;
+// font-weight: 500;
+
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+
+*{
+  transition: padding 0.3s, width 0.3s, font-size 0.3s, background-image 0.3s, transform 0.3s, filter 0.3s;
+}
+body{
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+  background-color: #decc75;
+  background-image: url(../images/bg.jpg);
+  background-position: top center;
+  background-attachment: fixed;
+}
+
+.ossian{
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 1900px;
+  width: 100%;
+  
+}
+
+// 遊戲的 LOGO
+
+.game-logo{
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 356px;
+  img{
+    width: 100%;
+  }
+}
+
+
+// 卷軸的手風琴效果
+
+.reel{
+  margin: 0 auto 2em;
+  max-width: 1286px;
+
+  .reel-img {
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+
+    img{
+      width: 100%;
+    }
+
+    .data-1{
+      position: absolute; 
+      top: 0; 
+      left: 0;
+    }
+  }
+
+  .reel-content {
+    display: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 4;
+    // margin: 0 auto;
+    padding: 0.625em;
+    max-width: calc(1286px - 4em);
+    background-color: #855a38;
+    background-image: url(../images/end-of-story.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 16px 8px -5px rgba(0, 0, 0, 0.4);
+    .yellow-bg{
+      margin-bottom: 46px;
+      padding: 0.625em;
+      background-image: url(../images/yellow-bg.png);
+      background-repeat: repeat-y;
+      background-size: 100%;
+      border-radius: 5px;
+      box-shadow: 0 0 100px rgba(133, 90, 56, 0.5) inset;
+      .copywriting{
+        padding: 1em 0;
+        line-height: 1.5;
+        text-align: center;
+      }
+      .yellow-white-bg{
+        margin-top: 2.5em;
+        padding: 0.625em;
+        background-color: #fff8d9;
+        border-radius: 5px;
+        .wax-seal{
+          margin: -50px auto 0;
+          max-width: 103px;
+          img{
+            width: 100%;
+          }
+        }
+      }
+      .content{
+        line-height: 1.45;
+      }
+      dl{
+        &.fishing-prince{
+          display: flex;
+          // flex-wrap: nowrap;
+          gap: 1em;
+          margin: 0;
+          // padding: 0 2em;
+          dd{
+            margin: 0;
+            padding: 0;
+            &:nth-last-child(1){
+              text-align: center;
+            }
+            div{
+              padding: 1em 0;
+              column-fill: balance;
+            }
+            .fire::first-letter{
+              padding-right: 0.2em;
+              float: left;
+              font-size: 2em;
+              line-height: 1.25;
+              font-weight: bold;
+              color: #855a38;
+            }
+            em{
+              font-style: normal;
+              color: #4fb908;
+            }
+          }
+        }
+      }
+    }
+    .article-title{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-position: left center;
+      &.title-1{
+        background-image: url(../images/title-1.png);
+      }
+      &.title-2{
+        background-image: url(../images/title-2.png);
+      }
+      &.title-3{
+        background-image: url(../images/title-3.png);
+      }
+      &.title-4{
+        background-image: url(../images/title-4.png);
+      }
+      span{
+        display: none;
+      }
+    }
+  }
+}
+
+
+// 美人魚的切換
+
+.water-bg{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 300px;
+  height: 300px;
+  background-image: url(../images/water.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  // mix-blend-mode: multiply;
+  filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.35));
+  .buttons{
+    button{
+      width: 95px;
+      height: 45px;
+      text-decoration: none;
+      appearance: none;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      // background: url(../images/tag-1.png) transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+      transition: transform 0.3s;
+      &:hover{
+        transform: scale(1.15);
+      }
+      &.tag-water{
+        background-image: url(../images/tag-1.png);
+      }
+      &.tag-fire{
+        background-image: url(../images/tag-2.png);
+      }
+      &.tag-wind{
+        background-image: url(../images/tag-3.png);
+      }
+    }
+  }
+}
+.mermaid{
+  position: relative;
+  width: 129px;
+  height: 227px;
+}
+.mermaid img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@import "rwd";
