@@ -1048,7 +1048,6 @@ body {
 }
 .reel .reel-content .yellow-bg .yellow-white-bg {
   margin-top: 2.5em;
-  padding: 0.625em;
   background-color: #fff8d9;
   border-radius: 5px;
 }
@@ -1118,7 +1117,23 @@ body {
   display: none;
 }
 
+.eudemons-rows {
+  padding: 1em 0;
+  display: grid;
+  gap: 1em;
+  row-gap: 0;
+  border-bottom: 1px dashed #855a38;
+}
+.eudemons-rows h3 {
+  margin: 0;
+  padding: 0 0.75em;
+  display: inline-block;
+  background-color: #ccf6fb;
+  border-radius: 2em;
+}
+
 .water-bg {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1137,12 +1152,31 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
   -webkit-filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.35));
           filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.35));
 }
+.water-bg .buttons::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 66px;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+.water-bg .buttons.button1::before {
+  background-image: url(../images/eudemons-name-1.png);
+}
+.water-bg .buttons.button2::before {
+  background-image: url(../images/eudemons-name-2.png);
+}
+.water-bg .buttons.button3::before {
+  background-image: url(../images/eudemons-name-3.png);
+}
 .water-bg .buttons button {
-  width: 95px;
-  height: 45px;
   text-decoration: none;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1152,6 +1186,7 @@ body {
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 100%;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
@@ -1172,13 +1207,13 @@ body {
   background-image: url(../images/tag-3.png);
 }
 
-.mermaid {
+.eudemons {
+  overflow: hidden;
   position: relative;
-  width: 129px;
-  height: 227px;
+  width: 200px;
+  height: 200px;
 }
-
-.mermaid img {
+.eudemons img {
   position: absolute;
   top: 0;
   left: 0;
@@ -1206,6 +1241,9 @@ body {
   .reel .reel-content .yellow-bg {
     padding-top: 6vw;
   }
+  .reel .reel-content .yellow-bg .yellow-white-bg {
+    padding: 0;
+  }
   .reel .reel-content .yellow-bg .yellow-white-bg .wax-seal {
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
@@ -1225,6 +1263,26 @@ body {
   }
   .reel .reel-content .yellow-bg dl.fishing-prince dd:nth-last-child(1) img {
     max-width: 50%;
+  }
+  .eudemons-rows {
+    grid-template-columns: unset;
+    grid-template-areas: "ossian ossian";
+  }
+  .eudemons-rows > div:nth-child(1) {
+    grid-area: ossian;
+  }
+  .water-bg .buttons button {
+    width: 70px;
+    height: 35px;
+  }
+}
+@media only screen and (min-width: 450px) {
+  .water-bg .buttons button {
+    width: 90px;
+    height: 45px;
+  }
+  .reel .reel-content .yellow-bg .yellow-white-bg {
+    padding: 0.625em;
   }
 }
 @media only screen and (min-width: 520px) {
@@ -1268,6 +1326,13 @@ body {
     -webkit-column-count: unset;
        -moz-column-count: unset;
             column-count: unset;
+  }
+  .eudemons-rows {
+    grid-template-columns: 300px 1fr 1fr;
+    grid-template-areas: unset;
+  }
+  .eudemons-rows > div:nth-child(1) {
+    grid-area: unset;
   }
 }
 @media only screen and (min-width: 1100px) {

@@ -94,7 +94,7 @@ body{
       }
       .yellow-white-bg{
         margin-top: 2.5em;
-        padding: 0.625em;
+        // padding: 0.625em;
         background-color: #fff8d9;
         border-radius: 5px;
         .wax-seal{
@@ -169,8 +169,22 @@ body{
 
 
 // 美人魚的切換
-
+.eudemons-rows{
+  padding: 1em 0;
+  display: grid;
+  gap: 1em;
+  row-gap: 0;
+  border-bottom: 1px dashed #855a38;
+  h3{
+    margin: 0;
+    padding: 0 0.75em;
+    display: inline-block;
+    background-color: #ccf6fb;
+    border-radius: 2em;
+  }
+}
 .water-bg{
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -182,20 +196,46 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
-  // mix-blend-mode: multiply;
+  transform: scale(0.9);
   filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.35));
   .buttons{
+    // transform: translateY(-1em);
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 66px;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+    }
+    &.button1{
+      &::before{
+        background-image: url(../images/eudemons-name-1.png);
+      }
+    }
+    &.button2{
+      &::before{
+        background-image: url(../images/eudemons-name-2.png);
+      }
+    }
+    &.button3{
+      &::before{
+        background-image: url(../images/eudemons-name-3.png);
+      }
+    }
     button{
-      width: 95px;
-      height: 45px;
+      // width: 75px;
+      // height: 38px;
       text-decoration: none;
       appearance: none;
       outline: none;
       border: none;
       background-color: transparent;
-      // background: url(../images/tag-1.png) transparent;
       background-repeat: no-repeat;
       background-position: center;
+      background-size: 100%;
       cursor: pointer;
       transition: transform 0.3s;
       &:hover{
@@ -213,18 +253,20 @@ body{
     }
   }
 }
-.mermaid{
+.eudemons{
+  overflow: hidden;
   position: relative;
-  width: 129px;
-  height: 227px;
+  width: 200px;
+  height: 200px;
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
-.mermaid img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-}
+
 
 @import "rwd";

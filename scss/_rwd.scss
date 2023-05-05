@@ -17,6 +17,7 @@
       .yellow-bg{
         padding-top: 6vw;
         .yellow-white-bg{
+          padding: 0;
           .wax-seal{
             transform: scale(0.6);
           }
@@ -38,6 +39,42 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+  .eudemons-rows{
+    grid-template-columns: unset;
+    grid-template-areas: "ossian ossian";
+    > div{
+      &:nth-child(1){
+        grid-area: ossian;
+      }
+    }
+  }
+  .water-bg{
+    .buttons{
+      button{
+        width: 70px;
+        height: 35px;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 450px){
+  .water-bg{
+    .buttons{
+      button{
+        width: 90px;
+        height: 45px;
+      }
+    }
+  }
+  .reel{
+    .reel-content{
+      .yellow-bg{
+        .yellow-white-bg{
+          padding: 0.625em;
         }
       }
     }
@@ -107,6 +144,15 @@
             }
           }
         }
+      }
+    }
+  }
+  .eudemons-rows{
+    grid-template-columns: 300px 1fr 1fr;
+    grid-template-areas: unset;
+    > div{
+      &:nth-child(1){
+        grid-area: unset;
       }
     }
   }
