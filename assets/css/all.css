@@ -1040,6 +1040,7 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 2.5em;
+  width: 100%;
   background-image: url(../images/yellow-bg.png);
   background-repeat: repeat-y;
   background-size: 100%;
@@ -1249,7 +1250,7 @@ body {
     padding-top: 6vw;
   }
   .reel .reel-content .yellow-bg .yellow-white-bg {
-    padding: 0;
+    padding: 0.5em;
   }
   .reel .reel-content .yellow-bg .yellow-white-bg .wax-seal {
     -webkit-transform: scale(0.6);
@@ -1262,11 +1263,9 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .reel .reel-content .yellow-bg dl.fishing-prince dd {
+  .reel .reel-content .yellow-bg dl.fishing-prince dd:nth-last-child(1) {
     padding-bottom: 1em;
     width: 100%;
-  }
-  .reel .reel-content .yellow-bg dl.fishing-prince dd:nth-last-child(1) {
     text-align: center;
   }
   .reel .reel-content .yellow-bg dl.fishing-prince dd:nth-last-child(1) img {
@@ -1318,8 +1317,11 @@ body {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .reel .reel-content .yellow-bg dl.fishing-prince dd {
+  .reel .reel-content .yellow-bg dl.fishing-prince dd:nth-last-child(1) {
     width: unset;
+  }
+  .reel .reel-content .yellow-bg dl.fishing-prince dd:nth-last-child(1) img {
+    max-width: unset;
   }
   .reel .reel-content .yellow-bg dl.fishing-prince dd div {
     -webkit-column-count: unset;

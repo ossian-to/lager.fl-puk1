@@ -17,7 +17,7 @@
       .yellow-bg{
         padding-top: 6vw;
         .yellow-white-bg{
-          padding: 0;
+          padding: 0.5em;
           .wax-seal{
             transform: scale(0.6);
           }
@@ -29,9 +29,11 @@
           &.fishing-prince{
             flex-wrap: wrap;
             dd{
-              padding-bottom: 1em;
-              width: 100%;
+              // padding-bottom: 1em;
+              // width: 100%;
               &:nth-last-child(1){
+                padding-bottom: 1em;
+                width: 100%;
                 text-align: center;
                 img{
                   max-width: 100%;
@@ -114,7 +116,13 @@
           &.fishing-prince{
             flex-wrap: nowrap;
             dd{
-              width: unset;
+              // width: unset;
+              &:nth-last-child(1){
+                width: unset;
+                img{
+                  max-width: unset;
+                }
+              }
               div{
                 column-count: unset;
               }
