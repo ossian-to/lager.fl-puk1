@@ -1,4 +1,3 @@
-// 卷軸
 
 @media only screen and (min-width: 0){
   body{
@@ -14,6 +13,9 @@
     .reel-content{
       margin: 0 0.5em;
       transform: translateY(-7vw);
+      .copywriting{
+        padding-top: 18em;
+      }
       .yellow-bg{
         padding-top: 6vw;
         .yellow-white-bg{
@@ -29,14 +31,12 @@
           &.fishing-prince{
             flex-wrap: wrap;
             dd{
-              // padding-bottom: 1em;
-              // width: 100%;
               &:nth-last-child(1){
                 padding-bottom: 1em;
                 width: 100%;
                 text-align: center;
                 img{
-                  max-width: 100%;
+                  max-width: 70%;
                 }
               }
             }
@@ -55,20 +55,53 @@
     }
   }
   .water-bg{
+    padding: unset;
+    max-width: 100%;
+    height: 100%;
     .buttons{
-      button{
-        width: 70px;
-        height: 35px;
+      &.button1,
+      &.button2,
+      &.button3{
+        button{
+          width: 20vw;
+          height: 35px;
+        }
+      }
+      &.button4{
+        button{
+          width: 15vw;
+          height: 35px;
+        }
       }
     }
+  }
+  .sgwk{
+    padding-right: unset;
+  }
+}
+@media only screen and (min-width: 365px){
+  .water-bg{
+    padding: 1em 0 2em;
+    max-width: 300px;
+    height: 300px;
   }
 }
 @media only screen and (min-width: 450px){
   .water-bg{
     .buttons{
-      button{
-        width: 90px;
-        height: 45px;
+      &.button1,
+      &.button2,
+      &.button3{
+        button{
+          width: 90px;
+          height: 45px;
+        }
+      }
+      &.button4{
+        button{
+          width: 67px;
+          height: 45px;
+        }
       }
     }
   }
@@ -81,11 +114,29 @@
       }
     }
   }
+  .sgwk{
+    padding-right: 1em;
+  }
 }
 @media only screen and (min-width: 520px){
   .m-break{
     display: inline;
   }
+  // .reel-content{
+  //   .yellow-bg{
+  //     dl{
+  //       &.fishing-prince{
+  //         dd{
+  //           &:nth-last-child(1){
+  //             img{
+  //               max-width: 268px;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }
 @media only screen and (min-width: 700px){
   body{
@@ -94,6 +145,9 @@
   .reel{
     .reel-content{
       margin: 0 1em;
+      .copywriting{
+        padding-top: 13em;
+      }
       .yellow-bg{
         .yellow-white-bg{
           .wax-seal{
@@ -182,7 +236,7 @@
 @media only screen and (min-width: 1286px){
   .reel{
     .reel-img{
-      filter: drop-shadow(10px 15px 5px rgba(0, 0, 0, 0.35));
+      filter: drop-shadow(5px 35px 8px rgba(0, 0, 0, 0.35));
     }
     .reel-content{
       margin: 0 auto;

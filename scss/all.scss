@@ -63,14 +63,13 @@ body{
       left: 0;
     }
   }
-
   .reel-content {
     display: none;
     overflow: hidden;
     position: relative;
     z-index: 4;
     // margin: 0 auto;
-    padding: 0.625em;
+    padding: 0 0.625em 0.625em;
     max-width: calc(1286px - 4em);
     background-color: #855a38;
     background-image: url(../images/end-of-story.png);
@@ -78,9 +77,20 @@ body{
     background-position: right bottom;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    box-shadow: 0 16px 8px -5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 16px 8px -5px rgba(0, 0, 0, 0.4), 0 0 2px 2px #b88461 inset;
+    border: 3px solid #623f23;
+    .copywriting{
+      padding: 13em 0 1em;
+      width: 100%;
+      color: #ffdda9;
+      line-height: 1.5;
+      text-align: center;
+      background-image: url(../images/maps.png);
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
     .yellow-bg{
-      margin-bottom: 46px;
+      // margin-bottom: 46px;
       padding: 0.625em;
       display: flex;
       flex-wrap: wrap;
@@ -91,19 +101,14 @@ body{
       background-size: 100%;
       border-radius: 5px;
       box-shadow: 0 0 100px rgba(133, 90, 56, 0.5) inset;
-      .copywriting{
-        padding: 1em 0;
-        width: 100%;
-        line-height: 1.5;
-        text-align: center;
-      }
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
       .yellow-white-bg{
         // margin-top: 2.5em;
         // padding: 0.625em;
         background-color: #fff8d9;
         border-radius: 5px;
         .wax-seal{
-          margin: -50px auto 0;
+          margin: -40px auto 0;
           max-width: 103px;
           img{
             width: 100%;
@@ -128,7 +133,7 @@ body{
               text-align: center;
             }
             div{
-              padding: 1em 0;
+              padding: 1em 0 0;
               column-fill: balance;
             }
             .fire::first-letter{
@@ -141,7 +146,7 @@ body{
             }
             em{
               font-style: normal;
-              color: #4fb908;
+              color: #547feb;
             }
           }
         }
@@ -185,7 +190,8 @@ body{
     margin: 0;
     padding: 0 0.75em;
     display: inline-block;
-    background-color: #ccf6fb;
+    color: #ccf6fb;
+    background-color: #855a38;
     border-radius: 2em;
   }
 }
@@ -194,10 +200,11 @@ body{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  gap: 0;
   justify-content: center;
   margin: 0 auto;
-  max-width: 300px;
-  height: 300px;
+  // max-width: 300px;
+  // height: 300px;
   background-image: url(../images/water.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -205,6 +212,8 @@ body{
   transform: scale(0.9);
   filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.35));
   .buttons{
+    display: grid;
+    gap: 0.15em;
     // transform: translateY(-1em);
     &::before{
       content: '';
@@ -216,19 +225,32 @@ body{
       background-repeat: no-repeat;
       background-position: bottom center;
     }
+    // 人魚公主
     &.button1{
+      grid-template-columns: 1fr 1fr 1fr;
       &::before{
         background-image: url(../images/eudemons-name-1.png);
       }
     }
+    // 寄居蟹
     &.button2{
+      grid-template-columns: 1fr 1fr 1fr;
       &::before{
         background-image: url(../images/eudemons-name-2.png);
       }
     }
+    // 魚人精靈
     &.button3{
+      grid-template-columns: 1fr 1fr 1fr;
       &::before{
         background-image: url(../images/eudemons-name-3.png);
+      }
+    }
+    // 釣魚王子
+    &.button4{
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      &::before{
+        background-image: url(../images/eudemons-name-4.png);
       }
     }
     button{
@@ -247,14 +269,33 @@ body{
       &:hover{
         transform: scale(1.15);
       }
+      // 水屬性
       &.tag-water{
         background-image: url(../images/tag-1.png);
       }
+      // 火屬性
       &.tag-fire{
         background-image: url(../images/tag-2.png);
       }
+      // 風屬性
       &.tag-wind{
         background-image: url(../images/tag-3.png);
+      }
+      // 表情包-待機
+      &.tag-emoji-1{
+        background-image: url(../images/tag-4-1.png);
+      }
+      // 表情包-歡呼
+      &.tag-emoji-2{
+        background-image: url(../images/tag-4-2.png);
+      }
+      // 表情包-受擊/暈眩/死亡
+      &.tag-emoji-3{
+        background-image: url(../images/tag-4-3.png);
+      }
+      // 表情包-悲傷
+      &.tag-emoji-4{
+        background-image: url(../images/tag-4-4.png);
       }
     }
   }
@@ -262,7 +303,8 @@ body{
 .eudemons{
   overflow: hidden;
   position: relative;
-  width: 200px;
+  max-width: 200px;
+  width:100%;
   height: 200px;
   img{
     position: absolute;
@@ -274,5 +316,16 @@ body{
   }
 }
 
+// 史蓋窩克海的圖片
+.sgwk{
+  float: left;
+  margin: 0;
+  // padding-right: 1em;
+  max-width: 300px;
+  text-align: center;
+  img{
+    width: 100%;
+  }
+}
 
 @import "rwd";

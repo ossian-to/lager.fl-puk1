@@ -1020,7 +1020,7 @@ body {
   overflow: hidden;
   position: relative;
   z-index: 4;
-  padding: 0.625em;
+  padding: 0 0.625em 0.625em;
   max-width: calc(1286px - 4em);
   background-color: #855a38;
   background-image: url(../images/end-of-story.png);
@@ -1028,11 +1028,21 @@ body {
   background-position: right bottom;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  -webkit-box-shadow: 0 16px 8px -5px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 16px 8px -5px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 16px 8px -5px rgba(0, 0, 0, 0.4), 0 0 2px 2px #b88461 inset;
+          box-shadow: 0 16px 8px -5px rgba(0, 0, 0, 0.4), 0 0 2px 2px #b88461 inset;
+  border: 3px solid #623f23;
+}
+.reel .reel-content .copywriting {
+  padding: 13em 0 1em;
+  width: 100%;
+  color: #ffdda9;
+  line-height: 1.5;
+  text-align: center;
+  background-image: url(../images/maps.png);
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 .reel .reel-content .yellow-bg {
-  margin-bottom: 46px;
   padding: 0.625em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1047,19 +1057,15 @@ body {
   border-radius: 5px;
   -webkit-box-shadow: 0 0 100px rgba(133, 90, 56, 0.5) inset;
           box-shadow: 0 0 100px rgba(133, 90, 56, 0.5) inset;
-}
-.reel .reel-content .yellow-bg .copywriting {
-  padding: 1em 0;
-  width: 100%;
-  line-height: 1.5;
-  text-align: center;
+  -webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+          filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
 }
 .reel .reel-content .yellow-bg .yellow-white-bg {
   background-color: #fff8d9;
   border-radius: 5px;
 }
 .reel .reel-content .yellow-bg .yellow-white-bg .wax-seal {
-  margin: -50px auto 0;
+  margin: -40px auto 0;
   max-width: 103px;
 }
 .reel .reel-content .yellow-bg .yellow-white-bg .wax-seal img {
@@ -1084,7 +1090,7 @@ body {
   text-align: center;
 }
 .reel .reel-content .yellow-bg dl.fishing-prince dd div {
-  padding: 1em 0;
+  padding: 1em 0 0;
   -webkit-column-fill: balance;
      -moz-column-fill: balance;
           column-fill: balance;
@@ -1099,7 +1105,7 @@ body {
 }
 .reel .reel-content .yellow-bg dl.fishing-prince dd em {
   font-style: normal;
-  color: #4fb908;
+  color: #547feb;
 }
 .reel .reel-content .article-title {
   margin: 0;
@@ -1136,7 +1142,8 @@ body {
   margin: 0;
   padding: 0 0.75em;
   display: inline-block;
-  background-color: #ccf6fb;
+  color: #ccf6fb;
+  background-color: #855a38;
   border-radius: 2em;
 }
 
@@ -1150,12 +1157,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
-  max-width: 300px;
-  height: 300px;
   background-image: url(../images/water.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -1164,6 +1170,10 @@ body {
           transform: scale(0.9);
   -webkit-filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.35));
           filter: drop-shadow(3px 5px 2px rgba(0, 0, 0, 0.35));
+}
+.water-bg .buttons {
+  display: grid;
+  gap: 0.15em;
 }
 .water-bg .buttons::before {
   content: "";
@@ -1175,14 +1185,29 @@ body {
   background-repeat: no-repeat;
   background-position: bottom center;
 }
+.water-bg .buttons.button1 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
 .water-bg .buttons.button1::before {
   background-image: url(../images/eudemons-name-1.png);
+}
+.water-bg .buttons.button2 {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .water-bg .buttons.button2::before {
   background-image: url(../images/eudemons-name-2.png);
 }
+.water-bg .buttons.button3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
 .water-bg .buttons.button3::before {
   background-image: url(../images/eudemons-name-3.png);
+}
+.water-bg .buttons.button4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.water-bg .buttons.button4::before {
+  background-image: url(../images/eudemons-name-4.png);
 }
 .water-bg .buttons button {
   text-decoration: none;
@@ -1214,11 +1239,24 @@ body {
 .water-bg .buttons button.tag-wind {
   background-image: url(../images/tag-3.png);
 }
+.water-bg .buttons button.tag-emoji-1 {
+  background-image: url(../images/tag-4-1.png);
+}
+.water-bg .buttons button.tag-emoji-2 {
+  background-image: url(../images/tag-4-2.png);
+}
+.water-bg .buttons button.tag-emoji-3 {
+  background-image: url(../images/tag-4-3.png);
+}
+.water-bg .buttons button.tag-emoji-4 {
+  background-image: url(../images/tag-4-4.png);
+}
 
 .eudemons {
   overflow: hidden;
   position: relative;
-  width: 200px;
+  max-width: 200px;
+  width: 100%;
   height: 200px;
 }
 .eudemons img {
@@ -1228,6 +1266,16 @@ body {
   opacity: 0;
   width: 100%;
   height: 100%;
+}
+
+.sgwk {
+  float: left;
+  margin: 0;
+  max-width: 300px;
+  text-align: center;
+}
+.sgwk img {
+  width: 100%;
 }
 
 @media only screen and (min-width: 0) {
@@ -1245,6 +1293,9 @@ body {
     margin: 0 0.5em;
     -webkit-transform: translateY(-7vw);
             transform: translateY(-7vw);
+  }
+  .reel .reel-content .copywriting {
+    padding-top: 18em;
   }
   .reel .reel-content .yellow-bg {
     padding-top: 6vw;
@@ -1269,7 +1320,7 @@ body {
     text-align: center;
   }
   .reel .reel-content .yellow-bg dl.fishing-prince dd:nth-last-child(1) img {
-    max-width: 100%;
+    max-width: 70%;
   }
   .eudemons-rows {
     grid-template-columns: unset;
@@ -1278,18 +1329,44 @@ body {
   .eudemons-rows > div:nth-child(1) {
     grid-area: ossian;
   }
-  .water-bg .buttons button {
-    width: 70px;
+  .water-bg {
+    padding: unset;
+    max-width: 100%;
+    height: 100%;
+  }
+  .water-bg .buttons.button1 button, .water-bg .buttons.button2 button, .water-bg .buttons.button3 button {
+    width: 20vw;
     height: 35px;
+  }
+  .water-bg .buttons.button4 button {
+    width: 15vw;
+    height: 35px;
+  }
+  .sgwk {
+    padding-right: unset;
+  }
+}
+@media only screen and (min-width: 365px) {
+  .water-bg {
+    padding: 1em 0 2em;
+    max-width: 300px;
+    height: 300px;
   }
 }
 @media only screen and (min-width: 450px) {
-  .water-bg .buttons button {
+  .water-bg .buttons.button1 button, .water-bg .buttons.button2 button, .water-bg .buttons.button3 button {
     width: 90px;
+    height: 45px;
+  }
+  .water-bg .buttons.button4 button {
+    width: 67px;
     height: 45px;
   }
   .reel .reel-content .yellow-bg .yellow-white-bg {
     padding: 0.625em;
+  }
+  .sgwk {
+    padding-right: 1em;
   }
 }
 @media only screen and (min-width: 520px) {
@@ -1303,6 +1380,9 @@ body {
   }
   .reel .reel-content {
     margin: 0 1em;
+  }
+  .reel .reel-content .copywriting {
+    padding-top: 13em;
   }
   .reel .reel-content .yellow-bg .yellow-white-bg .wax-seal {
     -webkit-transform: scale(1);
@@ -1352,8 +1432,8 @@ body {
 }
 @media only screen and (min-width: 1286px) {
   .reel .reel-img {
-    -webkit-filter: drop-shadow(10px 15px 5px rgba(0, 0, 0, 0.35));
-            filter: drop-shadow(10px 15px 5px rgba(0, 0, 0, 0.35));
+    -webkit-filter: drop-shadow(5px 35px 8px rgba(0, 0, 0, 0.35));
+            filter: drop-shadow(5px 35px 8px rgba(0, 0, 0, 0.35));
   }
   .reel .reel-content {
     margin: 0 auto;
