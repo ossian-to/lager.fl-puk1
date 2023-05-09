@@ -9,15 +9,16 @@
 // @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
 
 *{
-  transition: padding 0.3s, width 0.3s, font-size 0.3s, background-image 0.3s, transform 0.3s, filter 0.3s;
+  transition: padding 0.3s, width 0.3s, min-height 0.3s, font-size 0.3s, background-image 0.3s, transform 0.3s, filter 0.3s;
 }
 body{
   overflow-y: scroll;
   margin: 0;
   padding: 0;
   background-color: #decc75;
-  background-image: url(../images/bg.jpg);
+  // background-image: url(../images/bg.jpg);
   background-position: top center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
@@ -32,14 +33,14 @@ body{
 
 // 遊戲的 LOGO
 
-.game-logo{
-  margin: 0 auto;
-  padding: 1em;
-  max-width: 356px;
-  img{
-    width: 100%;
-  }
-}
+// .game-logo{
+//   margin: 0 auto;
+//   padding: 1em;
+//   max-width: 356px;
+//   img{
+//     width: 100%;
+//   }
+// }
 
 
 // 卷軸的手風琴效果
@@ -72,9 +73,9 @@ body{
     padding: 0 0.625em 0.625em;
     max-width: calc(1286px - 4em);
     background-color: #855a38;
-    background-image: url(../images/end-of-story.png);
-    background-repeat: no-repeat;
-    background-position: right bottom;
+    // background-image: url(../images/end-of-story.png);
+    // background-repeat: no-repeat;
+    // background-position: right bottom;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 0 16px 8px -5px rgba(0, 0, 0, 0.4), 0 0 2px 2px #b88461 inset;

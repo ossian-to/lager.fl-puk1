@@ -965,10 +965,10 @@ svg {
 }
 
 * {
-  -webkit-transition: padding 0.3s, width 0.3s, font-size 0.3s, background-image 0.3s, -webkit-transform 0.3s, -webkit-filter 0.3s;
-  transition: padding 0.3s, width 0.3s, font-size 0.3s, background-image 0.3s, -webkit-transform 0.3s, -webkit-filter 0.3s;
-  transition: padding 0.3s, width 0.3s, font-size 0.3s, background-image 0.3s, transform 0.3s, filter 0.3s;
-  transition: padding 0.3s, width 0.3s, font-size 0.3s, background-image 0.3s, transform 0.3s, filter 0.3s, -webkit-transform 0.3s, -webkit-filter 0.3s;
+  -webkit-transition: padding 0.3s, width 0.3s, min-height 0.3s, font-size 0.3s, background-image 0.3s, -webkit-transform 0.3s, -webkit-filter 0.3s;
+  transition: padding 0.3s, width 0.3s, min-height 0.3s, font-size 0.3s, background-image 0.3s, -webkit-transform 0.3s, -webkit-filter 0.3s;
+  transition: padding 0.3s, width 0.3s, min-height 0.3s, font-size 0.3s, background-image 0.3s, transform 0.3s, filter 0.3s;
+  transition: padding 0.3s, width 0.3s, min-height 0.3s, font-size 0.3s, background-image 0.3s, transform 0.3s, filter 0.3s, -webkit-transform 0.3s, -webkit-filter 0.3s;
 }
 
 body {
@@ -976,8 +976,8 @@ body {
   margin: 0;
   padding: 0;
   background-color: #decc75;
-  background-image: url(../images/bg.jpg);
   background-position: top center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
@@ -986,15 +986,6 @@ body {
   margin: 0 auto;
   padding: 1em;
   max-width: 1900px;
-  width: 100%;
-}
-
-.game-logo {
-  margin: 0 auto;
-  padding: 1em;
-  max-width: 356px;
-}
-.game-logo img {
   width: 100%;
 }
 
@@ -1023,9 +1014,6 @@ body {
   padding: 0 0.625em 0.625em;
   max-width: calc(1286px - 4em);
   background-color: #855a38;
-  background-image: url(../images/end-of-story.png);
-  background-repeat: no-repeat;
-  background-position: right bottom;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   -webkit-box-shadow: 0 16px 8px -5px rgba(0, 0, 0, 0.4), 0 0 2px 2px #b88461 inset;
@@ -1281,9 +1269,27 @@ body {
 @media only screen and (min-width: 0) {
   body {
     font-size: 16px;
+    background-image: url(../images/bg-m.jpg);
+    background-size: 100%;
+  }
+  body .bottom-bg {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(../images/bottom-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100%;
   }
   .m-break {
     display: block;
+  }
+  .game-logo {
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 60vw;
+  }
+  .game-logo img {
+    width: 100%;
   }
   .reel .reel-img {
     -webkit-filter: drop-shadow(1vw 1vw 0.5vw rgba(0, 0, 0, 0.35));
@@ -1354,6 +1360,14 @@ body {
   }
 }
 @media only screen and (min-width: 450px) {
+  .game-logo {
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 356px;
+  }
+  .game-logo img {
+    width: 100%;
+  }
   .water-bg .buttons.button1 button, .water-bg .buttons.button2 button, .water-bg .buttons.button3 button {
     width: 90px;
     height: 45px;
@@ -1377,6 +1391,16 @@ body {
 @media only screen and (min-width: 700px) {
   body {
     font-size: 22px;
+    background-image: url(../images/bg.jpg);
+    background-size: unset;
+  }
+  body .bottom-bg {
+    width: unset;
+    height: unset;
+    background-image: unset;
+    background-repeat: unset;
+    background-position: unset;
+    background-size: unset;
   }
   .reel .reel-content {
     margin: 0 1em;

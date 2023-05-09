@@ -9,7 +9,10 @@
   <link rel="stylesheet" href="assets/css/all.css">
 </head>
 <body>
+<div class="bottom-bg">
+
   <div class="ossian">
+
 
 
 
@@ -224,8 +227,9 @@
     </div><!--.reels end-->
 
 
-
+  
   </div><!--.ossian edn-->
+  </div><!--.bottom-bg end-->
     
     <script>
       $(document).ready(function () {
@@ -238,11 +242,11 @@
           // 檢查是否已展開
           if ($(this).next().is(':visible')) {
             // 已展開，關閉它
-            $(this).next().slideUp();
+            $(this).next().slideUp("slow");
           } else {
             // 未展開，關閉其它所有面板，再展開它
-            $('.reel-content').slideUp();
-            $(this).next().slideDown();
+            $('.reel-content').slideUp("slow");
+            $(this).next().slideDown("slow");
           }
         });
 

@@ -2,9 +2,28 @@
 @media only screen and (min-width: 0){
   body{
     font-size: 16px;
+    background-image: url(../images/bg-m.jpg);
+    background-size: 100%;
+    // background-attachment: unset;
+    .bottom-bg{
+      width: 100vw;
+      min-height: 100vh;
+      background-image: url(../images/bottom-bg.png);
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-size: 100%;
+    }
   }
   .m-break{
     display: block;
+  }
+  .game-logo{
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 60vw;
+    img{
+      width: 100%;
+    }
   }
   .reel{
     .reel-img{
@@ -87,6 +106,14 @@
   }
 }
 @media only screen and (min-width: 450px){
+  .game-logo{
+    margin: 0 auto;
+    padding: 1em;
+    max-width: 356px;
+    img{
+      width: 100%;
+    }
+  }
   .water-bg{
     .buttons{
       &.button1,
@@ -141,6 +168,17 @@
 @media only screen and (min-width: 700px){
   body{
     font-size: 22px;
+    background-image: url(../images/bg.jpg);
+    background-size: unset;
+    // background-attachment: fixed;
+    .bottom-bg{
+      width: unset;
+      height: unset;
+      background-image: unset;
+      background-repeat: unset;
+      background-position: unset;
+      background-size: unset;
+    }
   }
   .reel{
     .reel-content{
