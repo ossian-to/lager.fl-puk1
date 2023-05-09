@@ -9,6 +9,11 @@
   <link rel="stylesheet" href="assets/css/all.css">
 </head>
 <body>
+<div class="overlay">
+  <div class="mark"></div>
+  <!-- <img src="assets/images/mark.png"> -->
+</div>
+
 <div class="bottom-bg">
 
   <div class="ossian">
@@ -234,7 +239,25 @@
     <script>
       $(document).ready(function () {
 
-        
+
+        // 取得 .overlay 和 .mark 物件
+        var $overlay = $('.overlay');
+        var $mark = $('.mark');
+
+        // 綁定點擊 .mark 的事件處理函數
+        $mark.click(function () {
+          // 執行動畫效果
+          $mark.animate({
+            opacity: 0,
+          }, 1000);
+
+          $overlay.fadeOut(1000, function () {
+            // 動畫結束後，將 .overlay 隱藏
+            $overlay.css('display', 'none');
+          });
+        });
+
+
         // 預設將卷軸的內容收闔
         $('.reel-content').hide();
         // 點選卷軸的圖檔時，檢查當時內容是否有展開

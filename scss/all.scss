@@ -22,6 +22,44 @@ body{
   background-attachment: fixed;
 }
 
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.55);
+  // background-image: url(../images/book.png);
+  // background-repeat: no-repeat;
+  // background-position: center;
+  z-index: 10;
+  backdrop-filter: blur(1.25em);
+}
+
+.mark {
+  width: 289px;
+  height: 276px;
+  background-image: url(../images/mark-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  animation: jump 3s infinite;
+  // transition: animation 0.3s;
+  cursor: pointer;
+}
+@keyframes jump {
+  0%{
+    background-image: url(../images/mark-1.png);
+  }
+  50%{
+    background-image: url(../images/mark-2.png);
+  }
+  0%{
+    background-image: url(../images/mark-1.png);
+  }
+}
+
 .ossian{
   overflow: hidden;
   margin: 0 auto;
@@ -48,6 +86,19 @@ body{
 .reel{
   margin: 0 auto 2em;
   max-width: 1286px;
+  // transition: transform 0.3s;
+  // &:nth-child(odd){
+  //   transform: rotate(2deg);
+  //   &:hover{
+  //     transform: rotate(0deg);
+  //   }
+  // }
+  // &:nth-child(even){
+  //   transform: rotate(-2deg);
+  //   &:hover{
+  //     transform: rotate(0deg);
+  //   }
+  // }
 
   .reel-img {
     position: relative;

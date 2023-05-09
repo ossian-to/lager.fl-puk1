@@ -981,6 +981,60 @@ body {
   background-attachment: fixed;
 }
 
+.overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 10;
+  -webkit-backdrop-filter: blur(1.25em);
+          backdrop-filter: blur(1.25em);
+}
+
+.mark {
+  width: 289px;
+  height: 276px;
+  background-image: url(../images/mark-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  -webkit-animation: jump 3s infinite;
+          animation: jump 3s infinite;
+  cursor: pointer;
+}
+
+@-webkit-keyframes jump {
+  0% {
+    background-image: url(../images/mark-1.png);
+  }
+  50% {
+    background-image: url(../images/mark-2.png);
+  }
+  0% {
+    background-image: url(../images/mark-1.png);
+  }
+}
+
+@keyframes jump {
+  0% {
+    background-image: url(../images/mark-1.png);
+  }
+  50% {
+    background-image: url(../images/mark-2.png);
+  }
+  0% {
+    background-image: url(../images/mark-1.png);
+  }
+}
 .ossian {
   overflow: hidden;
   margin: 0 auto;
