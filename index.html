@@ -9,16 +9,17 @@
   <link rel="stylesheet" href="assets/css/all.css">
 </head>
 <body>
+
+
 <div class="overlay">
   <div class="mark"></div>
   <!-- <img src="assets/images/mark.png"> -->
 </div>
 
+
 <div class="bottom-bg">
 
   <div class="ossian">
-
-
 
 
     <!-- 遊戲LOGO............................................................. -->
@@ -234,7 +235,7 @@
 
   
   </div><!--.ossian edn-->
-  </div><!--.bottom-bg end-->
+</div><!--.bottom-bg end-->
     
     <script>
       $(document).ready(function () {
@@ -248,8 +249,11 @@
         $mark.click(function () {
           // 執行動畫效果
           $mark.animate({
+            transform: 'scale(1)',
+            width: '300%',
+            height: '300%',
             opacity: 0,
-          }, 1000);
+          }, 500);
 
           $overlay.fadeOut(1000, function () {
             // 動畫結束後，將 .overlay 隱藏
