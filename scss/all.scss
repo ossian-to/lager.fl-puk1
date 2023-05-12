@@ -242,7 +242,7 @@ body{
   border-bottom: 1px dashed #855a38;
   h3{
     margin: 0;
-    padding: 0 0.75em;
+    padding: 0 0.5em;
     display: inline-block;
     color: #ccf6fb;
     background-color: #855a38;
@@ -282,29 +282,38 @@ body{
     // 人魚公主
     &.button1{
       grid-template-columns: 1fr 1fr 1fr;
-      &::before{
-        background-image: url(../images/eudemons-name-1.png);
-      }
+      // &::before{
+      //   background-image: url(../images/eudemons-name-1.png);
+      // }
     }
     // 寄居蟹
     &.button2{
       grid-template-columns: 1fr 1fr 1fr;
-      &::before{
-        background-image: url(../images/eudemons-name-2.png);
-      }
+      // &::before{
+      //   background-image: url(../images/eudemons-name-2.png);
+      // }
     }
     // 魚人精靈
     &.button3{
       grid-template-columns: 1fr 1fr 1fr;
-      &::before{
-        background-image: url(../images/eudemons-name-3.png);
-      }
+      // &::before{
+      //   background-image: url(../images/eudemons-name-3.png);
+      // }
     }
     // 釣魚王子
     &.button4{
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      &::before{
-        background-image: url(../images/eudemons-name-4.png);
+      grid-template-columns: unset;
+      // &::before{
+      //   background-image: url(../images/eudemons-name-4.png);
+      // }
+      button{
+        &:nth-child(1),
+        &:nth-child(2){
+          display: none;
+        }
+        // &:nth-child(3){
+        //   justify-self: center;
+        // }
       }
     }
     button{
@@ -341,25 +350,25 @@ body{
       }
       // 表情包-歡呼
       &.tag-emoji-2{
-        background-image: url(../images/tag-4-2.png);
+        background-image: url(../images/tag-4-1.png);
       }
       // 表情包-受擊/暈眩/死亡
       &.tag-emoji-3{
-        background-image: url(../images/tag-4-3.png);
+        background-image: url(../images/tag-4-1.png);
       }
       // 表情包-悲傷
       &.tag-emoji-4{
-        background-image: url(../images/tag-4-4.png);
+        background-image: url(../images/tag-4-1.png);
       }
     }
   }
 }
 .eudemons{
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
-  max-width: 200px;
-  width:100%;
-  height: 200px;
+  // max-width: 235px;
+  // width:100%;
+  // height: 235px;
   img{
     position: absolute;
     top: 0;
@@ -368,6 +377,10 @@ body{
     width: 100%;
     height: 100%;
   }
+}
+.orange{
+  color: #f0782a;
+  background-color: #ffec9b;
 }
 
 // 史蓋窩克海的圖片

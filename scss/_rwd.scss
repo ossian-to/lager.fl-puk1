@@ -77,6 +77,11 @@
       }
     }
   }
+  .eudemons{
+    max-width: 200px;
+    width:100%;
+    height: 200px;
+  }
   .water-bg{
     padding: unset;
     max-width: 100%;
@@ -84,15 +89,10 @@
     .buttons{
       &.button1,
       &.button2,
-      &.button3{
-        button{
-          width: 20vw;
-          height: 35px;
-        }
-      }
+      &.button3,
       &.button4{
         button{
-          width: 15vw;
+          width: 20vw;
           height: 35px;
         }
       }
@@ -126,15 +126,10 @@
     .buttons{
       &.button1,
       &.button2,
-      &.button3{
-        button{
-          width: 90px;
-          height: 45px;
-        }
-      }
+      &.button3,
       &.button4{
         button{
-          width: 67px;
+          width: 90px;
           height: 45px;
         }
       }
@@ -148,6 +143,11 @@
         }
       }
     }
+  }
+  .eudemons{
+    max-width: 235px;
+    width:100%;
+    height: 235px;
   }
   .sgwk{
     padding-right: 1em;
