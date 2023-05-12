@@ -190,14 +190,6 @@ body{
               padding: 1em 0 0;
               column-fill: balance;
             }
-            .fire::first-letter{
-              padding-right: 0.2em;
-              float: left;
-              font-size: 2em;
-              line-height: 1.25;
-              font-weight: bold;
-              color: #855a38;
-            }
             em{
               font-style: normal;
               color: #547feb;
@@ -230,6 +222,15 @@ body{
       }
     }
   }
+}
+
+.fire::first-letter{
+  padding-right: 0.2em;
+  float: left;
+  font-size: 2em;
+  line-height: 1.25;
+  font-weight: bold;
+  color: #855a38;
 }
 
 

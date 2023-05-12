@@ -1135,14 +1135,6 @@ body {
      -moz-column-fill: balance;
           column-fill: balance;
 }
-.reel .reel-content .yellow-bg dl.fishing-prince dd .fire::first-letter {
-  padding-right: 0.2em;
-  float: left;
-  font-size: 2em;
-  line-height: 1.25;
-  font-weight: bold;
-  color: #855a38;
-}
 .reel .reel-content .yellow-bg dl.fishing-prince dd em {
   font-style: normal;
   color: #547feb;
@@ -1169,6 +1161,15 @@ body {
 }
 .reel .reel-content .article-title span {
   display: none;
+}
+
+.fire::first-letter {
+  padding-right: 0.2em;
+  float: left;
+  font-size: 2em;
+  line-height: 1.25;
+  font-weight: bold;
+  color: #855a38;
 }
 
 .eudemons-rows {
