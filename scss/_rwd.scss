@@ -101,6 +101,23 @@
   .sgwk{
     padding-right: unset;
   }
+  .gossip{
+    padding: 2em 0 1em;
+    li{
+      padding: 2em 0.75em 3em;
+      width: 100%;
+      background-image: url(../images/npc-m.png);
+    }
+  }
+  .screenshot{
+    // flex-wrap: wrap;
+    dd{
+      &::after{
+        content: unset;
+      }
+      width: 100%;
+    }
+  }
 }
 @media only screen and (min-width: 365px){
   .water-bg{
@@ -157,21 +174,19 @@
   .m-break{
     display: inline;
   }
-  // .reel-content{
-  //   .yellow-bg{
-  //     dl{
-  //       &.fishing-prince{
-  //         dd{
-  //           &:nth-last-child(1){
-  //             img{
-  //               max-width: 268px;
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+  .screenshot{
+    dd{
+      width: 250px;
+    }
+  }
+  .gossip{
+    padding: 3em 0 0 0;
+    li{
+      padding: 2em 0.75em;
+      width: 45%;
+      // background-image: url(../images/npc-m.png);
+    }
+  }
 }
 @media only screen and (min-width: 700px){
   body{
@@ -238,6 +253,21 @@
     > div{
       &:nth-child(1){
         grid-area: unset;
+      }
+    }
+  }
+  .gossip{
+    // padding: 3em 0 0 0;
+    li{
+      // padding: 2em 0.75em;
+      width: 30%;
+      background-image: url(../images/npc.png);
+    }
+  }
+  .screenshot{
+    dd{
+      &::after{
+        content: '';
       }
     }
   }

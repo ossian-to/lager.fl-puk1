@@ -49,6 +49,7 @@ body{
   // transition: animation 0.3s;
   cursor: pointer;
 }
+
 @keyframes jump {
   0%{
     background-image: url(../images/mark-1.png);
@@ -160,7 +161,13 @@ body{
         // margin-top: 2.5em;
         // padding: 0.625em;
         background-color: #fff8d9;
+        background-image: url(../images/mark-4.png);
+        background-repeat: no-repeat;
+        background-position: right bottom;
         border-radius: 5px;
+        &.pb-2{
+          padding-bottom: 2em;
+        }
         .wax-seal{
           margin: -40px auto 0;
           max-width: 103px;
@@ -171,6 +178,10 @@ body{
       }
       .content{
         line-height: 1.45;
+        em{
+          font-style: normal;
+          color: #547feb;
+        }
       }
       dl{
         &.fishing-prince{
@@ -190,11 +201,11 @@ body{
               padding: 1em 0 0;
               column-fill: balance;
             }
-            em{
-              font-style: normal;
-              color: #547feb;
-            }
           }
+          // em{
+          //   font-style: normal;
+          //   color: #547feb;
+          // }
         }
       }
     }
@@ -386,13 +397,116 @@ body{
 
 // 史蓋窩克海的圖片
 .sgwk{
-  float: left;
-  margin: 0;
-  // padding-right: 1em;
+  float: right;
+  margin: 1em 0 0 0;
+  padding-left: 1em;
   max-width: 300px;
   text-align: center;
   img{
     width: 100%;
+  }
+}
+
+// 小道消息
+
+.gossip{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1.5em 1em;
+  margin: 0;
+  list-style: none;
+  &.pt-1{
+    padding-top: 1em;
+  }
+  li{
+    position: relative;
+    
+    font-size: 85%;
+    color: rgba(184, 132, 97, 1);
+    background-color: #fffcf1;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    border-radius: 0.5em;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+    h4{
+      position: absolute;
+      top: -0.75em;
+      margin: 0;
+      padding: 0.25em 0.5em;
+      font-size: 1.25em;
+      text-align: center;
+      color: #fff8d9;
+      background-color: rgba(184, 132, 97, 1);
+      background-image: url(../images/mark-3.png);
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      background-size: 100%;
+      border-radius: 0.15em;
+      transform: rotate(-4deg);
+      // transform: translateY(-1.25em);
+    }
+  }
+}
+.deep{
+  padding: 1em;
+  background-color: #623f23;
+  border-radius: 1em;
+  h3{
+    text-align: center;
+    color: #fff8d9;
+  }
+}
+
+.screenshot{
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 1em;
+  dd{
+    position: relative;
+    margin: 0;
+    padding: 1px;
+    // width: 250px;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.15);
+    &.none,
+    &:nth-last-child(1){
+      &::after{
+        content: unset;
+      }
+    }
+    &::after{
+      // content: '';
+      position: absolute;
+      top: calc(50% - 25px);
+      right: -35px;
+      width: 70px;
+      height: 50px;
+      background-image: url(../images/j.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      z-index: 2;
+      // border: 1px solid red;
+    }
+    figure{
+      margin: 0;
+      width: 100%;
+      figcaption{
+        padding: 0.5em;
+        text-align: center;
+        font-size: 80%;
+      }
+      img{
+        width: 100%;
+        border-radius: 1em;
+      }
+    }
   }
 }
 
