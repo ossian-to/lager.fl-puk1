@@ -1118,6 +1118,7 @@ body {
   width: 100%;
 }
 .reel .reel-content .yellow-bg .content {
+  position: relative;
   line-height: 1.45;
 }
 .reel .reel-content .yellow-bg .content em {
@@ -1221,6 +1222,10 @@ body {
 .water-bg .buttons {
   display: grid;
   gap: 0.15em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 .water-bg .buttons::before {
   content: "";
@@ -1318,6 +1323,16 @@ body {
   width: 100%;
 }
 
+.sgwk-title {
+  margin: 0 auto;
+  padding-top: 1em;
+  max-width: 540px;
+  text-align: center;
+}
+.sgwk-title img {
+  width: 100%;
+}
+
 .gossip {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1334,12 +1349,12 @@ body {
   margin: 0;
   list-style: none;
 }
-.gossip.pt-1 {
+.gossip.pt-1-pb-1 {
   padding-top: 1em;
+  padding-bottom: 1em;
 }
 .gossip li {
   position: relative;
-  font-size: 85%;
   color: rgb(184, 132, 97);
   background-color: #fffcf1;
   background-repeat: no-repeat;
@@ -1372,6 +1387,8 @@ body {
   border-radius: 1em;
 }
 .deep h3 {
+  margin: 0;
+  padding: 0 0 1em 0;
   text-align: center;
   color: #fff8d9;
 }
@@ -1414,6 +1431,10 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
   z-index: 2;
+  -webkit-animation: os 0.5s infinite;
+          animation: os 0.5s infinite;
+  -webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
+          filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
 }
 .screenshot dd figure {
   margin: 0;
@@ -1422,11 +1443,51 @@ body {
 .screenshot dd figure figcaption {
   padding: 0.5em;
   text-align: center;
-  font-size: 80%;
 }
 .screenshot dd figure img {
   width: 100%;
   border-radius: 1em;
+}
+
+@-webkit-keyframes os {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(0.85em);
+            transform: translateX(0.85em);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes os {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(0.85em);
+            transform: translateX(0.85em);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+.blue {
+  color: #00a1ff;
+}
+
+.red {
+  color: #e85117;
+}
+
+.green {
+  color: #169b13;
 }
 
 @media only screen and (min-width: 0) {
@@ -1514,7 +1575,7 @@ body {
   }
   .water-bg .buttons.button1 button, .water-bg .buttons.button2 button, .water-bg .buttons.button3 button, .water-bg .buttons.button4 button {
     width: 20vw;
-    height: 35px;
+    height: 45px;
   }
   .sgwk {
     padding-right: unset;
@@ -1524,6 +1585,7 @@ body {
   }
   .gossip li {
     padding: 2em 0.75em 3em;
+    font-size: 100%;
     width: 100%;
     background-image: url(../images/npc-m.png);
   }
@@ -1532,6 +1594,9 @@ body {
   }
   .screenshot dd::after {
     content: unset;
+  }
+  .screenshot dd figure figcaption {
+    font-size: unset;
   }
 }
 @media only screen and (min-width: 365px) {
@@ -1636,11 +1701,15 @@ body {
     grid-area: unset;
   }
   .gossip li {
+    font-size: 85%;
     width: 30%;
     background-image: url(../images/npc.png);
   }
   .screenshot dd::after {
     content: "";
+  }
+  .screenshot dd figure figcaption {
+    font-size: 85%;
   }
 }
 @media only screen and (min-width: 1100px) {

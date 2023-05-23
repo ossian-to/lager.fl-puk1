@@ -93,7 +93,7 @@
       &.button4{
         button{
           width: 20vw;
-          height: 35px;
+          height: 45px;
         }
       }
     }
@@ -105,6 +105,7 @@
     padding: 2em 0 1em;
     li{
       padding: 2em 0.75em 3em;
+      font-size: 100%;
       width: 100%;
       background-image: url(../images/npc-m.png);
     }
@@ -112,10 +113,15 @@
   .screenshot{
     // flex-wrap: wrap;
     dd{
+      width: 100%;
       &::after{
         content: unset;
       }
-      width: 100%;
+      figure{
+        figcaption{
+          font-size: unset;
+        }
+      }
     }
   }
 }
@@ -183,8 +189,8 @@
     padding: 3em 0 0 0;
     li{
       padding: 2em 0.75em;
+      // font-size: 85%;
       width: 45%;
-      // background-image: url(../images/npc-m.png);
     }
   }
 }
@@ -260,6 +266,7 @@
     // padding: 3em 0 0 0;
     li{
       // padding: 2em 0.75em;
+      font-size: 85%;
       width: 30%;
       background-image: url(../images/npc.png);
     }
@@ -268,6 +275,11 @@
     dd{
       &::after{
         content: '';
+      }
+      figure{
+        figcaption{
+          font-size: 85%;
+        }
       }
     }
   }
